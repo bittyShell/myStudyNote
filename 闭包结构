@@ -1,0 +1,19 @@
+闭包结构：
+	1.具有两个关系是平行的函数作用域fn1和fn2
+	2.其中fn1函数作用域中具有局部变量a
+	3.在fn2函数作用域中可以访问fn1函数作用域中局部变量a
+团包的问题：将局部变量的生命周期进行无限延长 - 导致浏览器内存溢出
+  function fn() {
+        var a = 1;
+        return function () {
+            return a++;
+        }
+    }
+    var fun = fn();
+    console.log(fun());  // 1
+    console.log(fun());  // 2
+    console.log(fun());  // 3
+    console.log(fun());  // 4
+    // 团包将局部变量的生命周期变长--始终存在
+    //解决办法
+    var fun = null;

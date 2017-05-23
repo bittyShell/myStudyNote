@@ -1,4 +1,4 @@
- arguments实现模拟函数重载的效果：
+ arguments瀹炵幇妯℃嫙鍑芥暟閲嶈浇鐨勬晥鏋滐細
     function add(){
 	var len = arguments.length;
 	if(len==2){
@@ -14,4 +14,3 @@
 	console.log(add(1,2,3));  //6
 	console.log(add(1,2,3,4));  //10
 	console.log(add(1,2,3,4,5));  //undefined
-测试修改文件
