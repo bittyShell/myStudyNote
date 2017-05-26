@@ -1,0 +1,22 @@
+JSON
+	JSON在js中支持对象格式与数组格式
+	对象格式；{
+		key：value，
+		key：value，
+		....
+	}
+	数组格式：
+	    [value,value,value....]
+	JSON对象与JSON字符串：
+			JSON字符串必须是String类型的
+		JSON.stringify  --json对象转换为json字符串
+		JSON.parse   --json字符串转换为json对象
+	例： var obj = {
+		name:'小明',
+		age:8,
+		sex:'male'
+	};
+	//  将json对象转换为json字符串
+	var test1 = JSON.stringify(obj)
+	//将json字符串转换为json对象
+	var test2 = JSON.parse(test1);

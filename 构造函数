@@ -1,0 +1,38 @@
+对象与函数的关系：
+	函数本身是一个对象，Object本身也是一个函数。
+拓展函数的创建方法：
+	var 函数名= new Function(参数，函数体)；
+	例如：var fn = new Function('a','b','return a+b');
+			console.log(fn(1,2));--->3
+构造函数：
+	创建方法（相当于类）：
+		function 构造函数名(参数){
+			this.属性名=属性值；
+			this.方法名=function (){}
+		}
+	创建对象（相当于个体）：
+		var 对象名 = new 构造函数名();
+	构造函数所创建的对象能够继承构造函数中的所有属性与方法；
+Function对象的方法：
+	call();----能够把一个构造函数中的属性调到另一个构造函数中
+	例如：fuction Product(name){
+		this.name=name;
+	}
+	function Food(name){
+		Product.call(this,a)
+	}
+	apply()方法与call()方法类似，apply（）使用数组形式
+	特点：代码量降低，性能提高。
+原型：
+	原型是Function函数的一个属性--构造函数
+	所有的构造函数都具有一个属性--prototype
+	作用：
+		增加构造函数的方法或属性； 构造函数名.prototype.新增的属性或方法=
+	原型的类型:
+		原型是一个空对象，在JavaScript中，原型可以是任意的一个类型；
+	构造函数自身属性与原型属性重名：
+		同时存在，自身属性的优先级更高；
+原型的继承：
+	原型链 - 实现继承的最基本的方式
+	只继承于原型 
+	
